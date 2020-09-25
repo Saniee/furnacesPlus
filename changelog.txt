@@ -1,0 +1,6 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.0.3
+Date: 25. 09. 2020
+  Changes:
+    - Research time was lowered.
+    - Thumbnail was changed to a more suitable image.

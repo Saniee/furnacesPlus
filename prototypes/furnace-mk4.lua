@@ -13,6 +13,7 @@ data:extend({
         max_health = 350,
         corpse = "electric-furnace-remnants",
         dying_explosion = "electric-furnace-explosion",
+        rotate = false,
         resistances =
         {
           {
@@ -129,7 +130,7 @@ data:extend({
         enabled = false,
         name = "furnace-mk4",
         energy_required = 120,
-        ingredients = {{"steel-plate", 240}, {"processing-unit", 90}, {"stone-brick", 120}, {"electric-engine-unit", 40}, },
+        ingredients = {{"steel-plate", 240}, {"processing-unit", 90}, {"stone-brick", 120}, {"electric-engine-unit", 40}, {"low-density-structure", 50}, {"rocket-fuel", 500}},
         result = "furnace-mk4"
       },
       {
@@ -138,7 +139,7 @@ data:extend({
         name = "furnace-mk4",
         icon_size = 64,
         icon = "__furnacesPlus__/graphics/icons/mk4-furnace-icon.png",
-        prerequisites = {"logistic-science-pack", "chemical-science-pack", "furnace-mk3", "advanced-material-processing-2", "advanced-electronics-2", "electric-engine", "utility-science-pack"},
+        prerequisites = {"logistic-science-pack", "chemical-science-pack", "furnace-mk3", "advanced-material-processing-2", "advanced-electronics-2", "electric-engine", "utility-science-pack", "low-density-structure", "rocket-fuel"},
         effects =
         {
           {

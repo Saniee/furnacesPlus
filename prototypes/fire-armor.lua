@@ -40,6 +40,7 @@ recipe.ingredients = {{"copper-plate",200},{"steel-plate",50}}
 recipe.result = "fire-armor"
 
 local tech = table.deepcopy(data.raw["technology"]["heavy-armor"])
+tech.enabled = false
 tech.name = "fire-armor"
 tech.result = "fire-armor"
 

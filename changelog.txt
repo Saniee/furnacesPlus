@@ -1,4 +1,20 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.6
+Date: XX.XX.2020
+  Changes:
+---------------------------------------------------------------------------------------------------
+Version: 0.0.5
+Date: 05.10.2020
+  Changes:
+    - Mk4 Furnace now has a normal Sprite.
+    - Changed the Mk4 furnace sprite size. And collision box.
+---------------------------------------------------------------------------------------------------
+Version: 0.0.4
+Date: 27.09.2020
+  Changes:
+    - Mk4 furnace (Experimental - probably not balanced good)
+    - Mk4 furnace Recipe is subject to change.
+---------------------------------------------------------------------------------------------------
 Version: 0.0.3
 Date: 25. 09. 2020
   Changes:

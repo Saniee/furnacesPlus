@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.8
+Date: 22.10.2020
+  Bug Fixes:
+    - Upon fixing the Nuclear Reactor it made the same thing but with MK5 Furnaces. Both should now work!
+---------------------------------------------------------------------------------------------------
 Version: 0.0.7
 Date: 22.10.2020
   Bug Fixes:

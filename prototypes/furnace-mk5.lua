@@ -2,9 +2,6 @@
 local hit_effects = require ("__base__.prototypes.entity.demo-hit-effects")
 local sounds = require("__base__.prototypes.entity.demo-sounds")
 
-data:extend({{type = "fuel-category", name = "mk5"}})
-data.raw.item["uranium-fuel-cell"].fuel_category = "mk5"
-
 data:extend({
     {
         type = "furnace",
@@ -41,7 +38,7 @@ data:extend({
         {
           type = "burner",
           fuel_inventory_size = 1,
-          fuel_category = "mk5",
+          fuel_category = "nuclear",
           effectivity = 1,
           smoke =
           {

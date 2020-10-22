@@ -159,7 +159,7 @@ data:extend(
                         {
                           count = 250,
                           ingredients = {{"automation-science-pack", 1}},
-                          time = 60
+                          time = 20
                         },
                         order = "a-b-a"
                 }

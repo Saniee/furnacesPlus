@@ -2,8 +2,8 @@
 local hit_effects = require ("__base__.prototypes.entity.demo-hit-effects")
 local sounds = require("__base__.prototypes.entity.demo-sounds")
 
-data:extend({{type = "fuel-category", name = "nuclear"}})
-data.raw.item["rocket-fuel"].fuel_category = "nuclear"
+data:extend({{type = "fuel-category", name = "mk5"}})
+data.raw.item["uranium-fuel-cell"].fuel_category = "mk5"
 
 data:extend({
     {
@@ -23,26 +23,46 @@ data:extend({
             percent = 80
           }
         },
-        collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
-        selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
+        collision_box = {{-2.0, -2.0}, {2.0, 2.0}},
+        selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
         damaged_trigger_effect = hit_effects.entity(),
         module_specification =
         {
-          module_slots = 8,
+          module_slots = 0,
           module_info_icon_shift = {0, 0.8}
         },
         allowed_effects = {"consumption", "speed", "productivity", "pollution"},
         crafting_categories = {"smelting"},
         result_inventory_size = 1,
-        crafting_speed = 12,
-        energy_usage = "1MW",
+        crafting_speed = 24,
+        energy_usage = "50MW",
         source_inventory_size = 1,
         energy_source =
         {
           type = "burner",
           fuel_inventory_size = 1,
-          fuel_category = "nuclear",
-          effectivity = 6,
+          fuel_category = "mk5",
+          effectivity = 1,
+          smoke =
+          {
+            {
+              name = "smoke",
+              deviation = {0.1, 0.1},
+              frequency = 15,
+              position = {-1.1, -1.2},
+              starting_vertical_speed = 0.08,
+              starting_frame_deviation = 60
+            },
+            {
+                name = "smoke",
+                deviation = {0.1, 0.1},
+                frequency = 15,
+                position = {0.9, -1.2},
+                starting_vertical_speed = 0.08,
+                starting_frame_deviation = 60
+              }
+          }
+
         },
         vehicle_impact_sound = sounds.generic_impact,
         open_sound = sounds.machine_open,
@@ -52,7 +72,7 @@ data:extend({
           sound =
           {
             filename = "__furnacesPlus__/sounds/mk5-furnace.ogg",
-            volume = 0.6
+            volume = 0.3
           },
           audible_distance_modifier = 0.6,
           fade_in_ticks = 4,
@@ -63,7 +83,7 @@ data:extend({
           layers =
           {
             {
-              filename = "__furnacesPlus__/graphics/mk5-furnace/mk4-furnace-anim.png",
+              filename = "__furnacesPlus__/graphics/mk5-furnace/mk5-furnace-anim.png",
               priority = "high",
               width = 146,
               height = 146,
@@ -77,13 +97,13 @@ data:extend({
           {
             animation =
             {
-              filename = "__furnacesPlus__/graphics/mk5-furnace/mk4-furnace-anim.png",
+              filename = "__furnacesPlus__/graphics/mk5-furnace/mk5-furnace-anim.png",
               priority = "high",
               width = 146,
               height = 146,
               frame_count = 16,
               line_length = 16,
-              animation_speed = 0.2
+              animation_speed = 0.1
             },
             light = {intensity = 0.4, size = 6, shift = {0.0, 1.0}, color = {r = 1.0, g = 1.0, b = 1.0}}
           }
@@ -93,7 +113,7 @@ data:extend({
         {
           pictures =
           {
-            filename = "__furnacesPlus__/graphics/mk5-furnace/mk4-furnace.png",
+            filename = "__furnacesPlus__/graphics/mk5-furnace/mk5-furnace.png",
             priority = "extra-high",
             width = 96,
             height = 96,
@@ -105,41 +125,41 @@ data:extend({
       },
       {
         type = "item",
-        name = "furnace-mk4",
+        name = "furnace-mk5",
         icon = "__furnacesPlus__/graphics/icons/mk5-furnace-icon.png",
         icon_size = 64, icon_mipmaps = 4,
         subgroup = "smelting-machine",
         order = "z+",
-        place_result = "furnace-mk4",
+        place_result = "furnace-mk5",
         stack_size = 5
       },
       {
         type = "recipe",
         enabled = false,
-        name = "furnace-mk4",
+        name = "furnace-mk5",
         energy_required = 120,
-        ingredients = {{"steel-plate", 240}, {"processing-unit", 90}, {"stone-brick", 120}, {"electric-engine-unit", 40}, {"low-density-structure", 50}, {"rocket-fuel", 500}},
-        result = "furnace-mk4"
+        ingredients = {{"steel-plate", 500}, {"processing-unit", 150}, {"stone-brick", 200}, {"electric-engine-unit", 100}, {"low-density-structure", 10}, {"uranium-238", 20}, {"uranium-235", 1}},
+        result = "furnace-mk5"
       },
       {
         type = "technology",
         enabled = true,
-        name = "furnace-mk4",
+        name = "furnace-mk5",
         icon_size = 64,
         icon = "__furnacesPlus__/graphics/icons/mk5-furnace-icon.png",
-        prerequisites = {"logistic-science-pack", "chemical-science-pack", "furnace-mk3", "advanced-material-processing-2", "advanced-electronics-2", "electric-engine", "utility-science-pack", "low-density-structure", "rocket-fuel"},
+        prerequisites = {"furnace-mk4", "electric-engine", "production-science-pack", "uranium-processing"},
         effects =
         {
           {
             type = "unlock-recipe",
-            recipe = "furnace-mk4"
+            recipe = "furnace-mk5"
           }
         },
         unit =
         {
-          count = 2500,
-          ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1}, {"utility-science-pack", 1}},
-          time = 140
+          count = 1800,
+          ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1}, {"utility-science-pack", 1}, {"production-science-pack", 1}},
+          time = 80
         },
         order = "a-b-a"
     }

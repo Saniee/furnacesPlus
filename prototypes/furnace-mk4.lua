@@ -42,6 +42,7 @@ data:extend({
           type = "burner",
           fuel_inventory_size = 1,
           fuel_category = "rocket",
+          emissions_per_minute = 0.2,
           effectivity = 4,
           smoke =
           {
@@ -95,7 +96,7 @@ data:extend({
               height = 146,
               frame_count = 16,
               line_length = 16,
-              animation_speed = 0.2
+              animation_speed = 0.1
             },
             light = {intensity = 0.4, size = 6, shift = {0.0, 1.0}, color = {r = 1.0, g = 1.0, b = 1.0}}
           }
@@ -130,7 +131,7 @@ data:extend({
         enabled = false,
         name = "furnace-mk4",
         energy_required = 120,
-        ingredients = {{"steel-plate", 240}, {"processing-unit", 90}, {"stone-brick", 120}, {"electric-engine-unit", 40}, {"low-density-structure", 50}, {"rocket-fuel", 500}},
+        ingredients = {{"steel-plate", 240}, {"processing-unit", 90}, {"stone-brick", 120}, {"electric-engine-unit", 40}, {"low-density-structure", 50}},
         result = "furnace-mk4"
       },
       {
@@ -139,7 +140,7 @@ data:extend({
         name = "furnace-mk4",
         icon_size = 64,
         icon = "__furnacesPlus__/graphics/icons/mk4-furnace-icon.png",
-        prerequisites = {"logistic-science-pack", "chemical-science-pack", "furnace-mk3", "advanced-material-processing-2", "advanced-electronics-2", "electric-engine", "utility-science-pack", "low-density-structure", "rocket-fuel"},
+        prerequisites = {"logistic-science-pack", "chemical-science-pack", "furnace-mk3", "advanced-electronics-2", "electric-engine", "utility-science-pack", "rocket-fuel"},
         effects =
         {
           {
@@ -149,9 +150,9 @@ data:extend({
         },
         unit =
         {
-          count = 2000,
+          count = 1200,
           ingredients = {{"automation-science-pack", 1}, {"logistic-science-pack", 1}, {"chemical-science-pack", 1}, {"utility-science-pack", 1}},
-          time = 120
+          time = 65
         },
         order = "a-b-a"
     }

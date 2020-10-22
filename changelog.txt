@@ -1,7 +1,18 @@
 ---------------------------------------------------------------------------------------------------
-Version: 0.0.6
-Date: XX.XX.2020
+Version: 0.0.7
+Date: 22.10.2020
+  Bug Fixes:
+    - Nuclear reactor wouldnt accept nuclear fuel
   Changes:
+    - (Minor) Changed names of the fuel categories.
+    - (Minor) Made the sound of MK5 a little bit quiter. (It gets annoying)
+---------------------------------------------------------------------------------------------------
+Version: 0.0.6
+Date: 10.10.2020
+  Changes:
+    - MK5 Implemented and working.
+    - Changed technology research speeds.
+    - Recipe for MK4 was changed. (Removed Rocket Fuel)
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.5
 Date: 05.10.2020
@@ -9,14 +20,3 @@ Date: 05.10.2020
     - Mk4 Furnace now has a normal Sprite.
     - Changed the Mk4 furnace sprite size. And collision box.
 ---------------------------------------------------------------------------------------------------
-Version: 0.0.4
-Date: 27.09.2020
-  Changes:
-    - Mk4 furnace (Experimental - probably not balanced good)
-    - Mk4 furnace Recipe is subject to change.
----------------------------------------------------------------------------------------------------
-Version: 0.0.3
-Date: 25. 09. 2020
-  Changes:
-    - Research time was lowered.
-    - Thumbnail was changed to a more suitable image.

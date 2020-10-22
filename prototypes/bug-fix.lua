@@ -1,0 +1,1 @@
+data.raw.item["uranium-fuel-cell"].fuel_category = "nuclear"

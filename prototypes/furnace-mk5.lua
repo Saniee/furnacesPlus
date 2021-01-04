@@ -25,7 +25,7 @@ data:extend({
         damaged_trigger_effect = hit_effects.entity(),
         module_specification =
         {
-          module_slots = 0,
+          module_slots = 2,
           module_info_icon_shift = {0, 0.8}
         },
         allowed_effects = {"consumption", "speed", "productivity", "pollution"},
@@ -37,8 +37,9 @@ data:extend({
         energy_source =
         {
           type = "burner",
-          fuel_inventory_size = 1,
           fuel_category = "nuclear",
+          fuel_inventory_size = 1,
+          burnt_inventory_size = 1,
           effectivity = 1,
           smoke =
           {

@@ -38,8 +38,8 @@ data:extend({
         {
           type = "burner",
           fuel_inventory_size = 1,
-          fuel_category = "rocket",
-          emissions_per_minute = 0.2,
+          fuel_categories = {"rocket"},
+          emissions_per_minute = {pollution = 0.2},
           effectivity = 4,
           smoke =
           {
@@ -68,36 +68,10 @@ data:extend({
           fade_in_ticks = 4,
           fade_out_ticks = 20
         },
-        animation =
+        graphics_set =
         {
-          layers =
-          {
-            {
-              filename = "__furnacesPlus__/graphics/mk4-furnace/mk4-furnace-anim.png",
-              priority = "high",
-              width = 146,
-              height = 146,
-              frame_count = 1,
-              line_length = 1
-            }
-          }
-        },
-        working_visualisations =
-        {
-          {
-            animation =
-            {
-              filename = "__furnacesPlus__/graphics/mk4-furnace/mk4-furnace-anim.png",
-              priority = "high",
-              width = 146,
-              height = 146,
-              frame_count = 16,
-              line_length = 16,
-              animation_speed = 0.1
-            },
-            light = {intensity = 0.4, size = 6, shift = {0.0, 1.0}, color = {r = 1.0, g = 1.0, b = 1.0}}
-          }
-        },
+          
+        }
         fast_replaceable_group = "furnace",
         water_reflection =
         {
@@ -128,8 +102,8 @@ data:extend({
         enabled = false,
         name = "furnace-mk4",
         energy_required = 120,
-        ingredients = {{"steel-plate", 240}, {"processing-unit", 90}, {"stone-brick", 120}, {"electric-engine-unit", 40}, {"low-density-structure", 50}},
-        result = "furnace-mk4"
+        ingredients = {{type="item", name="steel-plate", amount=240}, {type="item", name="processing-unit", amount=90}, {type="item", name="stone-brick", amount=120}, {type="item", name="electric-engine-unit", amount=40}, {type="item", name="low-density-structure", amount=50}},
+        results = {{type="item", name="furnace-mk4", amount=1}}
       },
       {
         type = "technology",
@@ -137,7 +111,7 @@ data:extend({
         name = "furnace-mk4",
         icon_size = 64,
         icon = "__furnacesPlus__/graphics/icons/mk4-furnace-icon.png",
-        prerequisites = {"logistic-science-pack", "chemical-science-pack", "furnace-mk3", "advanced-electronics-2", "electric-engine", "utility-science-pack", "rocket-fuel"},
+        prerequisites = {"logistic-science-pack", "chemical-science-pack", "furnace-mk3", "advanced-circuit", "electric-engine", "utility-science-pack", "rocket-fuel"},
         effects =
         {
           {

@@ -10,9 +10,9 @@ accumulatorFurnace.icons = {
     },
 }
 accumulatorFurnace.crafting_speed = 8
-accumulatorFurnace.module_specification.module_slots = 4
+accumulatorFurnace.module_slots = 4
 accumulatorFurnace.energy_usage = "560kW"
-accumulatorFurnace.energy_source.emissions_per_minute = 0.5
+accumulatorFurnace.energy_source.emissions_per_minute = {pollution = 0.5}
 accumulatorFurnace.energy_source.drain = "300W"
 
 accumulatorFurnace.minable.result = "furnace-mk3"
@@ -179,8 +179,8 @@ data:extend(
                         enabled = false,
                         name = "furnace-mk3",
                         energy_required = 120,
-                        ingredients = {{"steel-plate", 120}, {"processing-unit", 45}, {"stone-brick", 60}, {"electric-engine-unit", 20}},
-                        result = "furnace-mk3"
+                        ingredients = {{type="item", name="steel-plate", amount=120}, {type="item", name="processing-unit", amount=45}, {type="item", name="stone-brick", amount=60}, {type="item", name="electric-engine-unit", amount=20}},
+                        results = {{type="item", name="furnace-mk3", amount=1}}
                 },
                 {
                         type = "technology",
@@ -188,7 +188,7 @@ data:extend(
                         name = "furnace-mk3",
                         icon_size = 64,
                         icon = "__furnacesPlus__/graphics/icons/electric-furnace.png",
-                        prerequisites = {"logistic-science-pack", "chemical-science-pack", "furnace-mk2", "advanced-material-processing-2", "advanced-electronics-2", "electric-engine"},
+                        prerequisites = {"logistic-science-pack", "chemical-science-pack", "furnace-mk2", "advanced-material-processing-2", "advanced-circuit", "electric-engine"},
                         effects =
                         {
                           {

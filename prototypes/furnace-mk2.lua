@@ -15,7 +15,7 @@ accumulatorFurnace.energy_source = {
         energy_usage = "280KW",
         usage_priority = "secondary-input",
         drain = "200W",
-        emissions_per_minute = 2
+        emissions_per_minute = {pollution = 2}
 }
 
 accumulatorFurnace.minable.result = "furnace-mk2"
@@ -191,8 +191,8 @@ data:extend(
                         enabled = false,
                         energy_required = 60,
                         name = "furnace-mk2",
-                        ingredients = {{"steel-plate", 45}, {"advanced-circuit", 35}, {"stone-brick", 30}, {"iron-stick", 25}},
-                        result = "furnace-mk2"
+                        ingredients = {{type="item", name="steel-plate", amount=45}, {type="item", name="advanced-circuit", amount=35}, {type="item", name="stone-brick", amount=30}, {type="item", name="iron-stick", amount=25}},
+                        results = {{type="item", name="furnace-mk2", amount=1}}
                 },
                 {
                         type = "technology",
@@ -200,7 +200,7 @@ data:extend(
                         name = "furnace-mk2",
                         icon_size = 64,
                         icon = "__furnacesPlus__/graphics/icons/steel-furnace.png",
-                        prerequisites = {"logistic-science-pack", "furnace-mk1", "steel-processing", "advanced-material-processing", "advanced-electronics"},
+                        prerequisites = {"logistic-science-pack", "furnace-mk1", "steel-processing", "advanced-material-processing", "electronics"},
                         effects =
                         {
                           {

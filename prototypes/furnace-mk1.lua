@@ -15,7 +15,7 @@ accumulatorFurnace.energy_source = {
         energy_usage = "140kW",
         usage_priority = "secondary-input",
         drain = "100W",
-        emissions_per_minute = 1
+        emissions_per_minute = {pollution = 1}
 }
 accumulatorFurnace.minable.result = "furnace-mk1"
 
@@ -138,8 +138,8 @@ data:extend(
                         energy_required = 30,
                         name = "furnace-mk1",
                         icon_size = 64, icon_mipmaps = 4,
-                        ingredients = {{"stone", 25}, {"electronic-circuit", 20}, {"iron-stick", 20}},
-                        result = "furnace-mk1"
+                        ingredients = {{type="item", name="stone", amount=25}, {type="item", name="electronic-circuit", amount=20}, {type="item", name="iron-stick", amount=20}},
+                        results = {{type="item", name="furnace-mk1", amount=1}}
                 },
                 {
                         type = "technology",

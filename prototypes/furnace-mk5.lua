@@ -37,7 +37,7 @@ data:extend({
         energy_source =
         {
           type = "burner",
-          fuel_category = "nuclear",
+          fuel_categories = {"nuclear"},
           fuel_inventory_size = 1,
           burnt_inventory_size = 1,
           effectivity = 1,
@@ -136,8 +136,8 @@ data:extend({
         enabled = false,
         name = "furnace-mk5",
         energy_required = 120,
-        ingredients = {{"steel-plate", 500}, {"processing-unit", 150}, {"stone-brick", 200}, {"electric-engine-unit", 100}, {"low-density-structure", 10}, {"uranium-238", 20}, {"uranium-235", 1}},
-        result = "furnace-mk5"
+        ingredients = {{type="item", name="steel-plate", amount=500}, {type="item", name="processing-unit", amount=150}, {type="item", name="stone-brick", amount=200}, {type="item", name="electric-engine-unit", amount=100}, {type="item", name="low-density-structure", amount=10}, {type="item", name="uranium-238", amount=20}, {type="item", name="uranium-235", amount=1}},
+        results = {{type="item", name="furnace-mk5", amount=1}}
       },
       {
         type = "technology",

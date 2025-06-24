@@ -1,0 +1,63 @@
+stages:
+    - prepare
+    - zip
+    - upload
+    - release
+
+default:
+    image: ubuntu:22.04
+
+workflow:
+    rules:
+        - if: $CI_COMMIT_TAG
+
+prepare:
+    stage: prepare
+    script:
+        - echo "PKG_REGISTRY_URL=${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/generic" >> variables.env
+    artifacts:
+        reports:
+            dotenv: variables.env
+
+zip-job:
+    stage: zip
+    needs:
+        - job: prepare
+    script:
+        - apt update
+        - apt install python3 -y
+        - python3 zip_mod.py
+    artifacts:
+        paths:
+            - furnacesPlus_$CI_COMMIT_TAG.zip
+
+upload-job:
+    stage: upload
+    needs:
+        - job: prepare
+          artifacts: true
+        - job: zip-job
+          artifacts: true
+    script:
+        - apt update
+        - apt install curl -y
+        - 'curl --header "JOB-TOKEN: ${CI_JOB_TOKEN}" --upload-file furnacesPlus_{$CI_COMMIT_TAG}.zip ${PKG_REGISTRY_URL}/release/${CI_COMMIT_TAG}/release-${CI_COMMIT_TAG}/furnacesPlus_{$CI_COMMIT_TAG}.zip'
+
+create-release:
+    stage: release
+    image: registry.gitlab.com/gitlab-org/cli:latest
+    needs:
+        - job: prepare
+          artifacts: true
+        - job: zip-job
+        - job: upload-job
+    script:
+        - echo 'Creating Release'
+    release:
+        tag_name: $CI_COMMIT_TAG
+        name: "Release $CI_COMMIT_TAG"
+        description: "Release created using the Build Pipeline."
+        assets:
+            links:
+                - name: "furnacesPlus_${CI_COMMIT_TAG}"
+                  url: "${PKG_REGISTRY_URL}/release/${CI_COMMIT_TAG}/release-${CI_COMMIT_TAG}/furnacesPlus_${CI_COMMIT_TAG}.zip"

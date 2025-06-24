@@ -1,6 +1,6 @@
 import zipfile
 
-version = "0.1.2"
+version = "0.1.3"
 
 with zipfile.ZipFile(f"furnacesPlus_{version}.zip", "w", zipfile.ZIP_LZMA, True, 9) as zf:
     # Mod info, and pic.

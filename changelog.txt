@@ -1,8 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+Date: 24.6.2025
+  Changes: 
+    - Updated to support Factorio 2.0 /w Space Age.
+    - Fixed Nuclear Furnace/Industrial Rocket Fueled Furnace not having module slots, even though they had them defined.
+---------------------------------------------------------------------------------------------------
 Version: 0.1.1
 Date: 4.1.2021
   Changes: 
-    - Fixed Nuclear furnaces crashing the game after using up nuclear fuel.
+    - Fixed Nuclear Furnaces crashing the game after using up nuclear fuel.
     - Industrial Rocket Fueled Furnace has now 4 module slots instead if 6.
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.0

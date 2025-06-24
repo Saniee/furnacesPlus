@@ -15,109 +15,116 @@ accumulatorFurnace.energy_source = {
         energy_usage = "140kW",
         usage_priority = "secondary-input",
         drain = "100W",
-        emissions_per_minute = 1
+        emissions_per_minute = { pollution = 1 }
 }
 accumulatorFurnace.minable.result = "furnace-mk1"
 
-accumulatorFurnace.animation =
-    {
-      layers =
-      {
-        {
-          filename = "__base__/graphics/entity/stone-furnace/stone-furnace.png",
-          tint = {r=1,g=0,b=0},
-          priority = "extra-high",
-          width = 81,
-          height = 64,
-          frame_count = 1,
-          shift = util.by_pixel(14.5, 2),
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/stone-furnace/hr-stone-furnace.png",
-            tint = {r=1,g=0,b=0},
-            priority = "extra-high",
-            width = 151,
-            height = 146,
-            frame_count = 1,
-            shift = util.by_pixel(-0.25, 6),
-            scale = 0.5
+-- tint = {r=1},
+accumulatorFurnace.graphics_set = {
+        animation = {
+          layers = {
+            {
+              filename = "__base__/graphics/entity/stone-furnace/stone-furnace.png",
+              height = 146,
+              tint = {r=1},
+              priority = "extra-high",
+              scale = 0.5,
+              shift = {
+                -0.0078125,
+                0.1875
+              },
+              width = 151
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__base__/graphics/entity/stone-furnace/stone-furnace-shadow.png",
+              height = 74,
+              tint = {r=1},
+              priority = "extra-high",
+              scale = 0.5,
+              shift = {
+                0.453125,
+                0.40625
+              },
+              width = 164
+            }
           }
         },
-        {
-          filename = "__base__/graphics/entity/stone-furnace/stone-furnace-shadow.png",
-          tint = {r=1,g=0,b=0},
-          priority = "extra-high",
-          width = 81,
-          height = 64,
-          frame_count = 1,
-          draw_as_shadow = true,
-          shift = util.by_pixel(14.5, 2),
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/stone-furnace/hr-stone-furnace-shadow.png",
+        water_reflection = {
+          orientation_to_variation = false,
+          pictures = {
+            filename = "__base__/graphics/entity/stone-furnace/stone-furnace-reflection.png",
+            height = 16,
+            tint = {r=1},
             priority = "extra-high",
-            width = 164,
-            height = 74,
-            frame_count = 1,
-            draw_as_shadow = true,
-            shift = util.by_pixel(14.5, 13),
-            scale = 0.5
+            scale = 5,
+            shift = {
+              0,
+              1.09375
+            },
+            variation_count = 1,
+            width = 16
+          },
+          rotate = false
+        },
+        working_visualisations = {
+          {
+            animation = {
+              layers = {
+                {
+                  draw_as_glow = true,
+                  filename = "__base__/graphics/entity/stone-furnace/stone-furnace-fire.png",
+                  frame_count = 48,
+                  height = 100,
+                  tint = {r=1},
+                  line_length = 8,
+                  priority = "extra-high",
+                  scale = 0.5,
+                  shift = {
+                    -0.0234375,
+                    0.171875
+                  },
+                  width = 41
+                },
+                {
+                  blend_mode = "additive",
+                  draw_as_glow = true,
+                  filename = "__base__/graphics/entity/stone-furnace/stone-furnace-light.png",
+                  height = 144,
+                  tint = {r=1},
+                  repeat_count = 48,
+                  scale = 0.5,
+                  shift = {
+                    0,
+                    0.15625
+                  },
+                  width = 106
+                }
+              }
+            },
+            effect = "flicker",
+            fadeout = true
+          },
+          {
+            animation = {
+              blend_mode = "additive",
+              draw_as_light = true,
+              filename = "__base__/graphics/entity/stone-furnace/stone-furnace-ground-light.png",
+              height = 110,
+              tint = {r=1},
+              repeat_count = 48,
+              scale = 0.5,
+              shift = {
+                -0.03125,
+                1.375
+              },
+              width = 116
+            },
+            effect = "flicker",
+            fadeout = true
           }
         }
-      }
-    }
-accumulatorFurnace.working_visualisations =
-    {
-      {
-        north_position = {0.0, 0.0},
-        east_position = {0.0, 0.0},
-        south_position = {0.0, 0.0},
-        west_position = {0.0, 0.0},
-        animation =
-        {
-          filename = "__base__/graphics/entity/stone-furnace/stone-furnace-fire.png",
-          tint = {r=1,g=0,b=0},
-          priority = "extra-high",
-          line_length = 8,
-          width = 20,
-          height = 49,
-          frame_count = 48,
-          axially_symmetrical = false,
-          direction_count = 1,
-          shift = util.by_pixel(-0.5, 5.5),
-          hr_version =
-          {
-            filename = "__base__/graphics/entity/stone-furnace/hr-stone-furnace-fire.png",
-            tint = {r=1,g=0,b=0},
-            priority = "extra-high",
-            line_length = 8,
-            width = 41,
-            height = 100,
-            frame_count = 48,
-            axially_symmetrical = false,
-            direction_count = 1,
-            shift = util.by_pixel(-0.75, 5.5),
-            scale = 0.5
-          }
-        },
-        light = {intensity = 1, size = 1, color = {r=1.0, g=1.0, b=1.0}}
-      }
-    }
-accumulatorFurnace.water_reflection =
-    {
-      pictures =
-      {
-        filename = "__base__/graphics/entity/steel-furnace/steel-furnace-reflection.png",
-        priority = "extra-high",
-        width = 20,
-        height = 24,
-        shift = util.by_pixel(0, 45),
-        variation_count = 1,
-        scale = 5,
-      },
-      rotate = false,
-      orientation_to_variation = false
-    }
+}
 
 data:extend{accumulatorFurnace}
 data:extend(
@@ -134,12 +141,17 @@ data:extend(
                 },
                 {
                         type = "recipe",
-                        enabled = false,
+                        enabled = true,
                         energy_required = 30,
                         name = "furnace-mk1",
+                        category = "smelting",
                         icon_size = 64, icon_mipmaps = 4,
-                        ingredients = {{"stone", 25}, {"electronic-circuit", 20}, {"iron-stick", 20}},
-                        result = "furnace-mk1"
+                        ingredients = {
+                          {type = "item", name= "stone", amount = 25}, 
+                          {type = "item", name= "electronic-circuit", amount = 20}, 
+                          {type = "item", name= "iron-stick", amount = 20}
+                        },
+                        results = {{type = "item", name = "furnace-mk1", amount = 1}}
                 },
                 {
                         type = "technology",

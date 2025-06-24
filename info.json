@@ -1,8 +1,9 @@
 {
-    "name": "furnacesPlus",
-    "author": "Saniee",
-    "version": "0.1.1",
-    "factorio_version": "1.1",
-    "title": "Furnaces Plus",
-    "description": "Adds new Advanced furnaces from the old ones! from the first 3 its just normal furnaces from the game that are modified to be electric and do less pollution. After t3 there is no pollution and furnaces go extremly fast."
+  "name": "furnacesPlus",
+  "author": "Saniee",
+  "version": "0.1.2",
+  "factorio_version": "2.0",
+  "dependencies": ["base >= 2.0"],
+  "title": "Furnaces Plus",
+  "description": "Adds new Advanced furnaces from the old ones! from the first 3 its just normal furnaces from the game that are modified to be electric and do less pollution. After t3 there is no pollution and furnaces go extremly fast."
 }

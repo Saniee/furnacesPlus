@@ -6,7 +6,7 @@ accumulatorFurnace.name = "furnace-mk2"
 accumulatorFurnace.icons = {
     {
       icon = accumulatorFurnace.icon,
-      tint = {r=1,g=0.5,b=0}
+      tint = {r=1,g=0.5}
     },
 }
 accumulatorFurnace.crafting_speed = 4
@@ -15,162 +15,136 @@ accumulatorFurnace.energy_source = {
         energy_usage = "280KW",
         usage_priority = "secondary-input",
         drain = "200W",
-        emissions_per_minute = 2
+        emissions_per_minute = { pollution = 2}
 }
 
 accumulatorFurnace.minable.result = "furnace-mk2"
 
-accumulatorFurnace.animation =
-{
-  layers =
-  {
-    {
-      filename = "__base__/graphics/entity/steel-furnace/steel-furnace.png",
-      tint = {r=1,g=0.5,b=0},
-      priority = "high",
-      width = 85,
-      height = 87,
-      frame_count = 1,
-      shift = util.by_pixel(-1.5, 1.5),
-      hr_version =
-      {
-        filename = "__base__/graphics/entity/steel-furnace/hr-steel-furnace.png",
-        tint = {r=1,g=0.5,b=0},
-        priority = "high",
-        width = 171,
-        height = 174,
-        frame_count = 1,
-        shift = util.by_pixel(-1.25, 2),
-        scale = 0.5
+-- tint = {r=1, g=0.5},
+accumulatorFurnace.graphics_set = {
+        animation = {
+          layers = {
+            {
+              filename = "__base__/graphics/entity/steel-furnace/steel-furnace.png",
+              height = 174,
+              tint = {r=1, g=0.5},
+              priority = "high",
+              scale = 0.5,
+              shift = {
+                -0.0390625,
+                0.0625
+              },
+              width = 171
+            },
+            {
+              draw_as_shadow = true,
+              filename = "__base__/graphics/entity/steel-furnace/steel-furnace-shadow.png",
+              height = 85,
+              tint = {r=1, g=0.5},
+              priority = "high",
+              scale = 0.5,
+              shift = {
+                1.2265625,
+                0.3515625
+              },
+              width = 277
+            }
+          }
+        },
+        water_reflection = {
+          orientation_to_variation = false,
+          pictures = {
+            filename = "__base__/graphics/entity/steel-furnace/steel-furnace-reflection.png",
+            height = 24,
+            tint = {r=1, g=0.5},
+            priority = "extra-high",
+            scale = 5,
+            shift = {
+              0,
+              1.40625
+            },
+            variation_count = 1,
+            width = 20
+          },
+          rotate = false
+        },
+        working_visualisations = {
+          {
+            animation = {
+              draw_as_glow = true,
+              filename = "__base__/graphics/entity/steel-furnace/steel-furnace-fire.png",
+              frame_count = 48,
+              height = 81,
+              tint = {r=1, g=0.5},
+              line_length = 8,
+              priority = "high",
+              scale = 0.5,
+              shift = {
+                -0.0234375,
+                0.1796875
+              },
+              width = 57
+            },
+            effect = "flicker",
+            fadeout = true
+          },
+          {
+            animation = {
+              blend_mode = "additive",
+              draw_as_glow = true,
+              filename = "__base__/graphics/entity/steel-furnace/steel-furnace-glow.png",
+              height = 43,
+              tint = {r=1, g=0.5},
+              priority = "high",
+              shift = {
+                0.03125,
+                0.640625
+              },
+              width = 60
+            },
+            effect = "flicker",
+            fadeout = true
+          },
+          {
+            animation = {
+              blend_mode = "additive",
+              draw_as_glow = true,
+              filename = "__base__/graphics/entity/steel-furnace/steel-furnace-working.png",
+              height = 150,
+              tint = {r=1, g=0.5},
+              line_length = 1,
+              priority = "high",
+              scale = 0.5,
+              shift = {
+                0,
+                -0.15625
+              },
+              width = 128
+            },
+            effect = "flicker",
+            fadeout = true
+          },
+          {
+            animation = {
+              blend_mode = "additive",
+              draw_as_light = true,
+              filename = "__base__/graphics/entity/steel-furnace/steel-furnace-ground-light.png",
+              height = 126,
+              tint = {r=1, g=0.5},
+              line_length = 1,
+              priority = "high",
+              scale = 0.5,
+              shift = {
+                0.03125,
+                1.5
+              },
+              width = 152
+            },
+            effect = "flicker",
+            fadeout = true
+          }
+        }
       }
-    },
-    {
-      filename = "__base__/graphics/entity/steel-furnace/steel-furnace-shadow.png",
-      tint = {r=1,g=0.5,b=0},
-      priority = "high",
-      width = 139,
-      height = 43,
-      frame_count = 1,
-      draw_as_shadow = true,
-      shift = util.by_pixel(39.5, 11.5),
-      hr_version =
-      {
-        filename = "__base__/graphics/entity/steel-furnace/hr-steel-furnace-shadow.png",
-        tint = {r=1,g=0.5,b=0},
-        priority = "high",
-        width = 277,
-        height = 85,
-        frame_count = 1,
-        draw_as_shadow = true,
-        shift = util.by_pixel(39.25, 11.25),
-        scale = 0.5
-      }
-    }
-  }
-}
-accumulatorFurnace.working_visualisations =
-{
-  {
-    north_position = {0.0, 0.0},
-    east_position = {0.0, 0.0},
-    south_position = {0.0, 0.0},
-    west_position = {0.0, 0.0},
-    animation =
-    {
-      filename = "__base__/graphics/entity/steel-furnace/steel-furnace-fire.png",
-      tint = {r=1,g=0.5,b=0},
-      priority = "high",
-      line_length = 8,
-      width = 29,
-      height = 40,
-      frame_count = 48,
-      direction_count = 1,
-      shift = util.by_pixel(-0.5, 6),
-      hr_version =
-      {
-        filename = "__base__/graphics/entity/steel-furnace/hr-steel-furnace-fire.png",
-        tint = {r=1,g=0.5,b=0},
-        priority = "high",
-        line_length = 8,
-        width = 57,
-        height = 81,
-        frame_count = 48,
-        direction_count = 1,
-        shift = util.by_pixel(-0.75, 5.75),
-        scale = 0.5
-      }
-    },
-    light = {intensity = 1, size = 1, color = {r = 1.0, g = 1.0, b = 1.0}}
-  },
-  {
-    north_position = {0.0, 0.0},
-    east_position = {0.0, 0.0},
-    south_position = {0.0, 0.0},
-    west_position = {0.0, 0.0},
-    effect = "flicker", -- changes alpha based on energy source light intensity
-    animation =
-    {
-      filename = "__base__/graphics/entity/steel-furnace/steel-furnace-glow.png",
-      tint = {r=1,g=0.5,b=0},
-      priority = "high",
-      width = 60,
-      height = 43,
-      frame_count = 1,
-      shift = {0.03125, 0.640625},
-      blend_mode = "additive"
-    }
-  },
-  {
-    north_position = {0.0, 0.0},
-    east_position = {0.0, 0.0},
-    south_position = {0.0, 0.0},
-    west_position = {0.0, 0.0},
-    effect = "flicker", -- changes alpha based on energy source light intensity
-    animation =
-    {
-      filename = "__base__/graphics/entity/steel-furnace/steel-furnace-working.png",
-      tint = {r=1,g=0.5,b=0},
-      priority = "high",
-      line_length = 8,
-      width = 64,
-      height = 74,
-      frame_count = 1,
-      direction_count = 1,
-      shift = util.by_pixel(0, -4.5),
-      blend_mode = "additive",
-      hr_version =
-      {
-        filename = "__base__/graphics/entity/steel-furnace/hr-steel-furnace-working.png",
-        tint = {r=1,g=0.5,b=0},
-        priority = "high",
-        line_length = 8,
-        width = 128,
-        height = 150,
-        frame_count = 1,
-        direction_count = 1,
-        shift = util.by_pixel(0, -4.25),
-        blend_mode = "additive",
-        scale = 0.5
-      }
-    }
-  }
-}
-accumulatorFurnace.water_reflection =
-{
-  pictures =
-  {
-    filename = "__base__/graphics/entity/steel-furnace/steel-furnace-reflection.png",
-    tint = {r=1,g=0.5,b=0},
-    priority = "extra-high",
-    width = 20,
-    height = 24,
-    shift = util.by_pixel(0, 45),
-    variation_count = 1,
-    scale = 5,
-  },
-  rotate = false,
-  orientation_to_variation = false
-}
 
 
 data:extend{accumulatorFurnace}
@@ -188,11 +162,17 @@ data:extend(
                 },
                 {
                         type = "recipe",
-                        enabled = false,
+                        enabled = true,
                         energy_required = 60,
+                        category = "smelting",
                         name = "furnace-mk2",
-                        ingredients = {{"steel-plate", 45}, {"advanced-circuit", 35}, {"stone-brick", 30}, {"iron-stick", 25}},
-                        result = "furnace-mk2"
+                        ingredients = {
+                          {type = "item", name = "steel-plate", amount = 45}, 
+                          {type = "item", name = "advanced-circuit", amount = 35}, 
+                          {type = "item", name = "stone-brick", amount = 30}, 
+                          {type = "item", name = "iron-stick", amount = 25}
+                        },
+                        results = {{type = "item", name = "furnace-mk2", amount = 1}}
                 },
                 {
                         type = "technology",
@@ -200,7 +180,7 @@ data:extend(
                         name = "furnace-mk2",
                         icon_size = 64,
                         icon = "__furnacesPlus__/graphics/icons/steel-furnace.png",
-                        prerequisites = {"logistic-science-pack", "furnace-mk1", "steel-processing", "advanced-material-processing", "advanced-electronics"},
+                        prerequisites = {"logistic-science-pack", "furnace-mk1", "steel-processing", "advanced-material-processing", "advanced-circuit"},
                         effects =
                         {
                           {

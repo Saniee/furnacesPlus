@@ -10,155 +10,157 @@ accumulatorFurnace.icons = {
     },
 }
 accumulatorFurnace.crafting_speed = 8
-accumulatorFurnace.module_specification.module_slots = 4
+accumulatorFurnace.module_slots = 4
 accumulatorFurnace.energy_usage = "560kW"
-accumulatorFurnace.energy_source.emissions_per_minute = 0.5
+accumulatorFurnace.energy_source.emissions_per_minute = { pollution = 0.5 }
 accumulatorFurnace.energy_source.drain = "300W"
 
 accumulatorFurnace.minable.result = "furnace-mk3"
 
-accumulatorFurnace.animation =
-{
-        layers =
-        {
-          {
-            filename = "__base__/graphics/entity/electric-furnace/electric-furnace-base.png",
-            tint = {r=0,g=0,b=1},
-            priority = "high",
-            width = 129,
-            height = 100,
-            frame_count = 1,
-            shift = {0.421875, 0},
-            hr_version =
+-- tint = {r=0,g=0,b=1},
+accumulatorFurnace.graphics_set = {
+        animation = {
+          layers = {
             {
-              filename = "__base__/graphics/entity/electric-furnace/hr-electric-furnace.png",
-              tint = {r=0,g=0,b=1},
-              priority = "high",
-              width = 239,
+              filename = "__base__/graphics/entity/electric-furnace/electric-furnace.png",
               height = 219,
-              frame_count = 1,
-              shift = util.by_pixel(0.75, 5.75),
-              scale = 0.5
-            }
-          },
-          {
-            filename = "__base__/graphics/entity/electric-furnace/electric-furnace-shadow.png",
-            tint = {r=0,g=0,b=1},
-            priority = "high",
-            width = 129,
-            height = 100,
-            frame_count = 1,
-            shift = {0.421875, 0},
-            draw_as_shadow = true,
-            hr_version =
-            {
-              filename = "__base__/graphics/entity/electric-furnace/hr-electric-furnace-shadow.png",
               tint = {r=0,g=0,b=1},
               priority = "high",
-              width = 227,
-              height = 171,
-              frame_count = 1,
+              scale = 0.5,
+              shift = {
+                0.0234375,
+                0.1796875
+              },
+              width = 239
+            },
+            {
               draw_as_shadow = true,
-              shift = util.by_pixel(11.25, 7.75),
-              scale = 0.5
-            }
-          }
-        }
-      }
-accumulatorFurnace.working_visualisations =
-      {
-        {
-          animation =
-          {
-            filename = "__base__/graphics/entity/electric-furnace/electric-furnace-heater.png",
-            tint = {r=0,g=0,b=1},
-            priority = "high",
-            width = 25,
-            height = 15,
-            frame_count = 12,
-            animation_speed = 0.5,
-            shift = {0.015625, 0.890625},
-            hr_version =
-            {
-              filename = "__base__/graphics/entity/electric-furnace/hr-electric-furnace-heater.png",
+              filename = "__base__/graphics/entity/electric-furnace/electric-furnace-shadow.png",
+              height = 171,
               tint = {r=0,g=0,b=1},
               priority = "high",
-              width = 60,
-              height = 56,
-              frame_count = 12,
+              scale = 0.5,
+              shift = {
+                0.3515625,
+                0.2421875
+              },
+              width = 227
+            }
+          }
+        },
+        frozen_patch = {
+          filename = "__space-age__/graphics/entity/frozen/electric-furnace/electric-furnace.png",
+          height = 219,
+          tint = {r=0,g=0,b=1},
+          scale = 0.5,
+          shift = {
+            0.0234375,
+            0.1796875
+          },
+          width = 239
+        },
+        water_reflection = {
+          orientation_to_variation = false,
+          pictures = {
+            filename = "__base__/graphics/entity/electric-furnace/electric-furnace-reflection.png",
+            height = 24,
+            priority = "extra-high",
+            scale = 5,
+            shift = {
+              0.15625,
+              1.25
+            },
+            variation_count = 1,
+            width = 24
+          },
+          rotate = false
+        },
+        working_visualisations = {
+          {
+            animation = {
+              layers = {
+                {
+                  animation_speed = 0.5,
+                  draw_as_glow = true,
+                  filename = "__base__/graphics/entity/electric-furnace/electric-furnace-heater.png",
+                  frame_count = 12,
+                  height = 56,
+                  tint = {r=0,g=0,b=1},
+                  priority = "high",
+                  scale = 0.5,
+                  shift = {
+                    0.0546875,
+                    1.0234375
+                  },
+                  width = 60
+                },
+                {
+                  blend_mode = "additive",
+                  draw_as_glow = true,
+                  filename = "__base__/graphics/entity/electric-furnace/electric-furnace-light.png",
+                  height = 202,
+                  tint = {r=0,g=0,b=1},
+                  repeat_count = 12,
+                  scale = 0.5,
+                  shift = {
+                    0.03125,
+                    0
+                  },
+                  width = 202
+                }
+              }
+            },
+            fadeout = true
+          },
+          {
+            animation = {
+              blend_mode = "additive",
+              draw_as_light = true,
+              filename = "__base__/graphics/entity/electric-furnace/electric-furnace-ground-light.png",
+              height = 124,
+              tint = {r=0,g=0,b=1},
+              scale = 0.5,
+              shift = {
+                0.09375,
+                2.15625
+              },
+              width = 166
+            },
+            fadeout = true
+          },
+          {
+            animation = {
               animation_speed = 0.5,
-              shift = util.by_pixel(1.75, 32.75),
-              scale = 0.5
+              filename = "__base__/graphics/entity/electric-furnace/electric-furnace-propeller-1.png",
+              frame_count = 4,
+              height = 25,
+              tint = {r=0,g=0,b=1},
+              priority = "high",
+              scale = 0.5,
+              shift = {
+                -0.640625,
+                -0.578125
+              },
+              width = 37
             }
           },
-          light = {intensity = 0.4, size = 6, shift = {0.0, 1.0}, color = {r = 1.0, g = 1.0, b = 1.0}}
-        },
-        {
-          animation =
           {
-            filename = "__base__/graphics/entity/electric-furnace/electric-furnace-propeller-1.png",
-            tint = {r=0,g=0,b=1},
-            priority = "high",
-            width = 19,
-            height = 13,
-            frame_count = 4,
-            animation_speed = 0.5,
-            shift = {-0.671875, -0.640625},
-            hr_version =
-            {
-              filename = "__base__/graphics/entity/electric-furnace/hr-electric-furnace-propeller-1.png",
-              tint = {r=0,g=0,b=1},
-              priority = "high",
-              width = 37,
-              height = 25,
-              frame_count = 4,
+            animation = {
               animation_speed = 0.5,
-              shift = util.by_pixel(-20.5, -18.5),
-              scale = 0.5
-            }
-          }
-        },
-        {
-          animation =
-          {
-            filename = "__base__/graphics/entity/electric-furnace/electric-furnace-propeller-2.png",
-            tint = {r=0,g=0,b=1},
-            priority = "high",
-            width = 12,
-            height = 9,
-            frame_count = 4,
-            animation_speed = 0.5,
-            shift = {0.0625, -1.234375},
-            hr_version =
-            {
-              filename = "__base__/graphics/entity/electric-furnace/hr-electric-furnace-propeller-2.png",
-              tint = {r=0,g=0,b=1},
-              priority = "high",
-              width = 23,
+              filename = "__base__/graphics/entity/electric-furnace/electric-furnace-propeller-2.png",
+              frame_count = 4,
               height = 15,
-              frame_count = 4,
-              animation_speed = 0.5,
-              shift = util.by_pixel(3.5, -38),
-              scale = 0.5
+              tint = {r=0,g=0,b=1},
+              priority = "high",
+              scale = 0.5,
+              shift = {
+                0.109375,
+                -1.1875
+              },
+              width = 23
             }
           }
         }
-      }
-accumulatorFurnace.water_reflection =
-      {
-        pictures =
-        {
-          filename = "__base__/graphics/entity/electric-furnace/electric-furnace-reflection.png",
-          tint = {r=0,g=0,b=1},
-          priority = "extra-high",
-          width = 24,
-          height = 24,
-          shift = util.by_pixel(5, 40),
-          variation_count = 1,
-          scale = 5,
-        },
-        rotate = false,
-        orientation_to_variation = false
       }
 
 data:extend{accumulatorFurnace}
@@ -178,9 +180,15 @@ data:extend(
                         type = "recipe",
                         enabled = false,
                         name = "furnace-mk3",
+                        category = "smelting",
                         energy_required = 120,
-                        ingredients = {{"steel-plate", 120}, {"processing-unit", 45}, {"stone-brick", 60}, {"electric-engine-unit", 20}},
-                        result = "furnace-mk3"
+                        ingredients = {
+                          {type = "item", name = "steel-plate", amount = 120}, 
+                          {type = "item", name = "processing-unit", amount = 45}, 
+                          {type = "item", name = "stone-brick", amount = 60}, 
+                          {type = "item", name = "electric-engine-unit", amount = 20}
+                        },
+                        results = {{type = "item", name = "furnace-mk3", amount = 1}}
                 },
                 {
                         type = "technology",
@@ -188,7 +196,7 @@ data:extend(
                         name = "furnace-mk3",
                         icon_size = 64,
                         icon = "__furnacesPlus__/graphics/icons/electric-furnace.png",
-                        prerequisites = {"logistic-science-pack", "chemical-science-pack", "furnace-mk2", "advanced-material-processing-2", "advanced-electronics-2", "electric-engine"},
+                        prerequisites = {"logistic-science-pack", "chemical-science-pack", "furnace-mk2", "advanced-material-processing-2", "electronics", "electric-engine"},
                         effects =
                         {
                           {

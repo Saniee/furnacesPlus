@@ -18,7 +18,7 @@ zip-job:
         - python3 zip_mod.py
     artifacts:
         paths:
-            - furnacesPlus_{$CI_COMMIT_TAG}.zip
+            - furnacesPlus_$CI_COMMIT_TAG.zip
 
 upload-job:
     stage: upload

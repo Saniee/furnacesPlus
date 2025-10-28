@@ -28,7 +28,7 @@ upload-job:
     script:
         - apt update
         - apt install curl -y
-        - 'curl --header "JOB-TOKEN: ${CI_JOB_TOKEN}" --upload-file furnacesPlus_{$CI_COMMIT_TAG}.zip ${PKG_REGISTRY_URL}/release/${CI_COMMIT_TAG}/furnacesPlus_{$CI_COMMIT_TAG}.zip'
+        - 'curl --header "JOB-TOKEN: ${CI_JOB_TOKEN}" --upload-file furnacesPlus_{$CI_COMMIT_TAG}.zip ${PKG_REGISTRY_URL}/release/${CI_COMMIT_TAG}/release-${CI_COMMIT_TAG}/furnacesPlus_{$CI_COMMIT_TAG}.zip'
 
 create-release:
     stage: release
@@ -45,4 +45,4 @@ create-release:
         assets:
             links:
                 - name: "furnacesPlus_${CI_COMMIT_TAG}"
-                  url: "${PKG_REGISTRY_URL}/release/${CI_COMMIT_TAG}/furnacesPlus_{$CI_COMMIT_TAG}.zip"
+                  url: "${PKG_REGISTRY_URL}/release/${CI_COMMIT_TAG}/release-${CI_COMMIT_TAG}/furnacesPlus_{$CI_COMMIT_TAG}.zip"

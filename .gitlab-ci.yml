@@ -30,12 +30,14 @@ upload-job:
         - apt install curl -y
         - 'curl --header "JOB-TOKEN: ${CI_JOB_TOKEN}" --upload-file furnacesPlus_{$CI_COMMIT_TAG}.zip ${PKG_REGISTRY_URL}/release/${CI_COMMIT_TAG}/furnacesPlus_{$CI_COMMIT_TAG}.zip'
 
-release-job:
+create-release:
     stage: release
     image: registry.gitlab.com/gitlab-org/cli:latest
     needs:
         - job: zip-job
         - job: upload-job
+    script:
+        - echo 'Creating Release'
     release:
         tag_name: $CI_COMMIT_TAG
         name: "Release $CI_COMMIT_TAG"

@@ -1,0 +1,46 @@
+stages:
+    - zip
+    - upload
+    - release
+
+default:
+    image: ubuntu:22.04
+
+workflow:
+    rules:
+        - if: $CI_COMMIT_TAG
+
+zip-job:
+    stage: zip
+    script:
+        - apt update
+        - apt install python3 -y
+        - python3 zip_mod.py
+    artifacts:
+        paths:
+            - furnacesPlus_{$CI_COMMIT_TAG}.zip
+
+upload-job:
+    stage: upload
+    needs:
+        - job: zip-job
+          artifacts: true
+    script:
+        - apt update
+        - apt install curl -y
+        - 'curl --header "JOB-TOKEN: ${CI_JOB_TOKEN}" --upload-file furnacesPlus_{$CI_COMMIT_TAG}.zip ${PKG_REGISTRY_URL}/release/${CI_COMMIT_TAG}/furnacesPlus_{$CI_COMMIT_TAG}.zip'
+
+release-job:
+    stage: release
+    image: registry.gitlab.com/gitlab-org/cli:latest
+    needs:
+        - job: zip-job
+        - job: upload-job
+    release:
+        tag_name: $CI_COMMIT_TAG
+        name: "Release $CI_COMMIT_TAG"
+        description: "Release created using the Build Pipeline."
+        assets:
+            links:
+                - name: "furnacesPlus_${CI_COMMIT_TAG}"
+                  url: "${PKG_REGISTRY_URL}/release/${CI_COMMIT_TAG}/furnacesPlus_{$CI_COMMIT_TAG}.zip"

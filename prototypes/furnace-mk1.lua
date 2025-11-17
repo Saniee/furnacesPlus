@@ -19,14 +19,14 @@ accumulatorFurnace.energy_source = {
 }
 accumulatorFurnace.minable.result = "furnace-mk1"
 
--- tint = {r=1},
+--tint = {r=1},
 accumulatorFurnace.graphics_set = {
         animation = {
           layers = {
             {
               filename = "__base__/graphics/entity/stone-furnace/stone-furnace.png",
               height = 146,
-              tint = {r=1},
+              tint = {r=255, g=127, b=127},
               priority = "extra-high",
               scale = 0.5,
               shift = {
@@ -39,7 +39,7 @@ accumulatorFurnace.graphics_set = {
               draw_as_shadow = true,
               filename = "__base__/graphics/entity/stone-furnace/stone-furnace-shadow.png",
               height = 74,
-              tint = {r=1},
+              tint = {r=255, g=127, b=127},
               priority = "extra-high",
               scale = 0.5,
               shift = {
@@ -55,7 +55,7 @@ accumulatorFurnace.graphics_set = {
           pictures = {
             filename = "__base__/graphics/entity/stone-furnace/stone-furnace-reflection.png",
             height = 16,
-            tint = {r=1},
+            tint = {r=255, g=127, b=127},
             priority = "extra-high",
             scale = 5,
             shift = {
@@ -76,7 +76,7 @@ accumulatorFurnace.graphics_set = {
                   filename = "__base__/graphics/entity/stone-furnace/stone-furnace-fire.png",
                   frame_count = 48,
                   height = 100,
-                  tint = {r=1},
+                  tint = {r=255, g=127, b=127},
                   line_length = 8,
                   priority = "extra-high",
                   scale = 0.5,
@@ -91,7 +91,7 @@ accumulatorFurnace.graphics_set = {
                   draw_as_glow = true,
                   filename = "__base__/graphics/entity/stone-furnace/stone-furnace-light.png",
                   height = 144,
-                  tint = {r=1},
+                  tint = {r=255, g=127, b=127},
                   repeat_count = 48,
                   scale = 0.5,
                   shift = {
@@ -111,7 +111,7 @@ accumulatorFurnace.graphics_set = {
               draw_as_light = true,
               filename = "__base__/graphics/entity/stone-furnace/stone-furnace-ground-light.png",
               height = 110,
-              tint = {r=1},
+              tint = {r=255, g=127, b=127},
               repeat_count = 48,
               scale = 0.5,
               shift = {

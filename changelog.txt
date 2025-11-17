@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.5
+Date: 17.11.2025
+  Changes:
+    - Changed the tint colors to nicer, more soothing colors.
+    - Made the MK5 Furnace collision box better.
+    - Changed the mod thumbnail with the new colors, and comparisons.
+---------------------------------------------------------------------------------------------------
 Version: 0.1.4
 Date: 13.11.2025
   Bugfixes:

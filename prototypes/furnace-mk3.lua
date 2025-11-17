@@ -6,7 +6,7 @@ accumulatorFurnace.name = "furnace-mk3"
 accumulatorFurnace.icons = {
     {
       icon = accumulatorFurnace.icon,
-      tint = {r=0,g=0,b=1}
+      tint = {r=127, g=127,b=255}
     },
 }
 accumulatorFurnace.crafting_speed = 8
@@ -17,14 +17,14 @@ accumulatorFurnace.energy_source.drain = "300W"
 
 accumulatorFurnace.minable.result = "furnace-mk3"
 
--- tint = {r=0,g=0,b=1},
+-- tint = {r=127, g=127,b=255},
 accumulatorFurnace.graphics_set = {
         animation = {
           layers = {
             {
               filename = "__base__/graphics/entity/electric-furnace/electric-furnace.png",
               height = 219,
-              tint = {r=0,g=0,b=1},
+              tint = {r=127, g=127,b=255},
               priority = "high",
               scale = 0.5,
               shift = {
@@ -37,7 +37,7 @@ accumulatorFurnace.graphics_set = {
               draw_as_shadow = true,
               filename = "__base__/graphics/entity/electric-furnace/electric-furnace-shadow.png",
               height = 171,
-              tint = {r=0,g=0,b=1},
+              tint = {r=127, g=127,b=255},
               priority = "high",
               scale = 0.5,
               shift = {
@@ -51,7 +51,7 @@ accumulatorFurnace.graphics_set = {
         frozen_patch = {
           filename = "__space-age__/graphics/entity/frozen/electric-furnace/electric-furnace.png",
           height = 219,
-          tint = {r=0,g=0,b=1},
+          tint = {r=127, g=127,b=255},
           scale = 0.5,
           shift = {
             0.0234375,
@@ -85,7 +85,7 @@ accumulatorFurnace.graphics_set = {
                   filename = "__base__/graphics/entity/electric-furnace/electric-furnace-heater.png",
                   frame_count = 12,
                   height = 56,
-                  tint = {r=0,g=0,b=1},
+                  tint = {r=127, g=127,b=255},
                   priority = "high",
                   scale = 0.5,
                   shift = {
@@ -99,7 +99,7 @@ accumulatorFurnace.graphics_set = {
                   draw_as_glow = true,
                   filename = "__base__/graphics/entity/electric-furnace/electric-furnace-light.png",
                   height = 202,
-                  tint = {r=0,g=0,b=1},
+                  tint = {r=127, g=127,b=255},
                   repeat_count = 12,
                   scale = 0.5,
                   shift = {
@@ -118,7 +118,7 @@ accumulatorFurnace.graphics_set = {
               draw_as_light = true,
               filename = "__base__/graphics/entity/electric-furnace/electric-furnace-ground-light.png",
               height = 124,
-              tint = {r=0,g=0,b=1},
+              tint = {r=127, g=127,b=255},
               scale = 0.5,
               shift = {
                 0.09375,
@@ -134,7 +134,7 @@ accumulatorFurnace.graphics_set = {
               filename = "__base__/graphics/entity/electric-furnace/electric-furnace-propeller-1.png",
               frame_count = 4,
               height = 25,
-              tint = {r=0,g=0,b=1},
+              tint = {r=127, g=127,b=255},
               priority = "high",
               scale = 0.5,
               shift = {
@@ -150,7 +150,7 @@ accumulatorFurnace.graphics_set = {
               filename = "__base__/graphics/entity/electric-furnace/electric-furnace-propeller-2.png",
               frame_count = 4,
               height = 15,
-              tint = {r=0,g=0,b=1},
+              tint = {r=127, g=127,b=255},
               priority = "high",
               scale = 0.5,
               shift = {

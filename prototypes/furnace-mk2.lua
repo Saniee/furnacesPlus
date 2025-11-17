@@ -6,7 +6,7 @@ accumulatorFurnace.name = "furnace-mk2"
 accumulatorFurnace.icons = {
     {
       icon = accumulatorFurnace.icon,
-      tint = {r=1,g=0.5}
+      tint = {r=255, g=190, b=127}
     },
 }
 accumulatorFurnace.crafting_speed = 4
@@ -20,14 +20,14 @@ accumulatorFurnace.energy_source = {
 
 accumulatorFurnace.minable.result = "furnace-mk2"
 
--- tint = {r=1, g=0.5},
+-- tint = {r=255, g=190, b=127},
 accumulatorFurnace.graphics_set = {
         animation = {
           layers = {
             {
               filename = "__base__/graphics/entity/steel-furnace/steel-furnace.png",
               height = 174,
-              tint = {r=1, g=0.5},
+              tint = {r=255, g=190, b=127},
               priority = "high",
               scale = 0.5,
               shift = {
@@ -40,7 +40,7 @@ accumulatorFurnace.graphics_set = {
               draw_as_shadow = true,
               filename = "__base__/graphics/entity/steel-furnace/steel-furnace-shadow.png",
               height = 85,
-              tint = {r=1, g=0.5},
+              tint = {r=255, g=190, b=127},
               priority = "high",
               scale = 0.5,
               shift = {
@@ -56,7 +56,7 @@ accumulatorFurnace.graphics_set = {
           pictures = {
             filename = "__base__/graphics/entity/steel-furnace/steel-furnace-reflection.png",
             height = 24,
-            tint = {r=1, g=0.5},
+            tint = {r=255, g=190, b=127},
             priority = "extra-high",
             scale = 5,
             shift = {
@@ -75,7 +75,7 @@ accumulatorFurnace.graphics_set = {
               filename = "__base__/graphics/entity/steel-furnace/steel-furnace-fire.png",
               frame_count = 48,
               height = 81,
-              tint = {r=1, g=0.5},
+              tint = {r=255, g=190, b=127},
               line_length = 8,
               priority = "high",
               scale = 0.5,
@@ -94,7 +94,7 @@ accumulatorFurnace.graphics_set = {
               draw_as_glow = true,
               filename = "__base__/graphics/entity/steel-furnace/steel-furnace-glow.png",
               height = 43,
-              tint = {r=1, g=0.5},
+              tint = {r=255, g=190, b=127},
               priority = "high",
               shift = {
                 0.03125,
@@ -111,7 +111,7 @@ accumulatorFurnace.graphics_set = {
               draw_as_glow = true,
               filename = "__base__/graphics/entity/steel-furnace/steel-furnace-working.png",
               height = 150,
-              tint = {r=1, g=0.5},
+              tint = {r=255, g=190, b=127},
               line_length = 1,
               priority = "high",
               scale = 0.5,
@@ -130,7 +130,7 @@ accumulatorFurnace.graphics_set = {
               draw_as_light = true,
               filename = "__base__/graphics/entity/steel-furnace/steel-furnace-ground-light.png",
               height = 126,
-              tint = {r=1, g=0.5},
+              tint = {r=255, g=190, b=127},
               line_length = 1,
               priority = "high",
               scale = 0.5,

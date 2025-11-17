@@ -20,7 +20,7 @@ data:extend({
             percent = 80
           }
         },
-        collision_box = {{-2.0, -2.0}, {2.0, 2.0}},
+        collision_box = {{-1.75, -1.75}, {1.75, 1.75}},
         selection_box = {{-2.0, -2.0}, {2.0, 2.0}},
         damaged_trigger_effect = hit_effects.entity(),
         module_slots = 6,

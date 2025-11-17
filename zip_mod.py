@@ -1,12 +1,14 @@
-import zipfile
 import json
+import zipfile
 
 with open("info.json", mode="r", encoding="utf-8") as info_f:
     mod_data = json.load(info_f)
 
 version = mod_data["version"]
 
-with zipfile.ZipFile(f"furnacesPlus_{version}.zip", "w", zipfile.ZIP_DEFLATED, True, 9) as zf:
+with zipfile.ZipFile(
+    f"furnacesPlus_{version}.zip", "w", zipfile.ZIP_DEFLATED, True, 9
+) as zf:
     # Mod info, and pic.
     zf.write("thumbnail.png", "furnacesPlus/thumbnail.png")
     zf.write("info.json", "furnacesPlus/info.json")
@@ -28,13 +30,40 @@ with zipfile.ZipFile(f"furnacesPlus_{version}.zip", "w", zipfile.ZIP_DEFLATED, T
     zf.write("locale/en/config.cfg", "furnacesPlus/locale/en/config.cfg")
     # Graphics
     #   Icons
-    zf.write("graphics/icons/electric-furnace.png", "furnacesPlus/graphics/icons/electric-furnace.png")
-    zf.write("graphics/icons/mk4-furnace-icon.png", "furnacesPlus/graphics/icons/mk4-furnace-icon.png")
-    zf.write("graphics/icons/mk5-furnace-icon.png", "furnacesPlus/graphics/icons/mk5-furnace-icon.png")
-    zf.write("graphics/icons/steel-furnace.png", "furnacesPlus/graphics/icons/steel-furnace.png")
-    zf.write("graphics/icons/stone-furnace.png", "furnacesPlus/graphics/icons/stone-furnace.png")
+    zf.write(
+        "graphics/icons/electric-furnace.png",
+        "furnacesPlus/graphics/icons/electric-furnace.png",
+    )
+    zf.write(
+        "graphics/icons/mk4-furnace-icon.png",
+        "furnacesPlus/graphics/icons/mk4-furnace-icon.png",
+    )
+    zf.write(
+        "graphics/icons/mk5-furnace-icon.png",
+        "furnacesPlus/graphics/icons/mk5-furnace-icon.png",
+    )
+    zf.write(
+        "graphics/icons/steel-furnace.png",
+        "furnacesPlus/graphics/icons/steel-furnace.png",
+    )
+    zf.write(
+        "graphics/icons/stone-furnace.png",
+        "furnacesPlus/graphics/icons/stone-furnace.png",
+    )
     #   Other
-    zf.write("graphics/mk4-furnace/mk4-furnace-anim.png", "furnacesPlus/graphics/mk4-furnace/mk4-furnace-anim.png")
-    zf.write("graphics/mk4-furnace/mk4-furnace.png", "furnacesPlus/graphics/mk4-furnace/mk4-furnace.png")
-    zf.write("graphics/mk5-furnace/mk5-furnace-anim.png", "furnacesPlus/graphics/mk5-furnace/mk5-furnace-anim.png")
-    zf.write("graphics/mk5-furnace/mk5-furnace.png", "furnacesPlus/graphics/mk5-furnace/mk5-furnace.png")
+    zf.write(
+        "graphics/mk4-furnace/mk4-furnace-anim.png",
+        "furnacesPlus/graphics/mk4-furnace/mk4-furnace-anim.png",
+    )
+    zf.write(
+        "graphics/mk4-furnace/mk4-furnace.png",
+        "furnacesPlus/graphics/mk4-furnace/mk4-furnace.png",
+    )
+    zf.write(
+        "graphics/mk5-furnace/mk5-furnace-anim.png",
+        "furnacesPlus/graphics/mk5-furnace/mk5-furnace-anim.png",
+    )
+    zf.write(
+        "graphics/mk5-furnace/mk5-furnace.png",
+        "furnacesPlus/graphics/mk5-furnace/mk5-furnace.png",
+    )

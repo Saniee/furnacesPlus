@@ -1,53 +1,58 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.6
+Date: 19-11-2025
+  Bugfixes:
+    - Fixed a bug where the new furnaces weren't shown in assemblers.
+---------------------------------------------------------------------------------------------------
 Version: 0.1.5
-Date: 17.11.2025
+Date: 17-11-2025
   Changes:
     - Changed the tint colors to nicer, more soothing colors.
     - Made the MK5 Furnace collision box better.
     - Changed the mod thumbnail with the new colors, and comparisons.
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.4
-Date: 13.11.2025
+Date: 13-11-2025
   Bugfixes:
     - Fixed the mod not showing in the mods browser. (Sorry that this went un-noticed for so long.)
   Changes:
     - Removed un-needed lines of declarations.
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.3
-Date: 24.6.2025
+Date: 24-6-2025
   Changes:
     - Updated to support Factorio 2.0 /w Space Age.
   Bugfixes:
     - Fixed Nuclear Furnace/Industrial Rocket Fueled Furnace not having module slots, even though they had them defined.
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.2
-Date: 1.11.2021
+Date: 1-11-2021
   Changes:
     - Fixed working_visualisation for the Advanced Steel Furnace
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.1
-Date: 4.1.2021
+Date: 4-1-2021
   Changes: 
     - Fixed Nuclear Furnaces crashing the game after using up nuclear fuel.
     - Industrial Rocket Fueled Furnace has now 4 module slots instead if 6.
 ---------------------------------------------------------------------------------------------------
 Version: 0.1.0
-Date: 24.11.2020
+Date: 24-11-2020
   Changes:
     - Compatible with 1.1
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.9
-Date: 10.11.2020
+Date: 10-11-2020
   Bugfixes:
     - Fixed the fuel problem! (Finally)
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.8
-Date: 22.10.2020
+Date: 22-10-2020
   Bugfixes:
     - Upon fixing the Nuclear Reactor it made the same thing but with MK5 Furnaces. Both should now work!
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.7
-Date: 22.10.2020
+Date: 22-10-2020
   Bugfixes:
     - Nuclear reactor wouldnt accept nuclear fuel
   Changes:
@@ -55,14 +60,14 @@ Date: 22.10.2020
     - (Minor) Made the sound of MK5 a little bit quiter. (It gets annoying)
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.6
-Date: 10.10.2020
+Date: 10-10-2020
   Changes:
     - MK5 Implemented and working.
     - Changed technology research speeds.
     - Recipe for MK4 was changed. (Removed Rocket Fuel)
 ---------------------------------------------------------------------------------------------------
 Version: 0.0.5
-Date: 05.10.2020
+Date: 05-10-2020
   Changes:
     - Mk4 Furnace now has a normal Sprite.
     - Changed the Mk4 furnace sprite size. And collision box.

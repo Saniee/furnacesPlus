@@ -6,7 +6,7 @@ accumulatorFurnace.name = "furnace-mk1"
 accumulatorFurnace.icons = {
         {
           icon = accumulatorFurnace.icon,
-          tint = {r=1,g=0,b=0}
+          tint = {r=255, g=127, b=127}
         },
 }
 accumulatorFurnace.crafting_speed = 2
@@ -19,7 +19,6 @@ accumulatorFurnace.energy_source = {
 }
 accumulatorFurnace.minable.result = "furnace-mk1"
 
---tint = {r=1},
 accumulatorFurnace.graphics_set = {
         animation = {
           layers = {
@@ -126,7 +125,7 @@ accumulatorFurnace.graphics_set = {
         }
 }
 
-data:extend{accumulatorFurnace}
+data:extend({accumulatorFurnace})
 data:extend(
         {
                 {
@@ -141,10 +140,10 @@ data:extend(
                 },
                 {
                         type = "recipe",
-                        enabled = true,
+                        enabled = false,
                         energy_required = 30,
                         name = "furnace-mk1",
-                        category = "smelting",
+                        category = "crafting",
                         icon_size = 64, icon_mipmaps = 4,
                         ingredients = {
                           {type = "item", name= "stone", amount = 25}, 

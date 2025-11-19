@@ -147,7 +147,7 @@ accumulatorFurnace.graphics_set = {
       }
 
 
-data:extend{accumulatorFurnace}
+data:extend({accumulatorFurnace})
 data:extend(
         {
                 {
@@ -162,9 +162,9 @@ data:extend(
                 },
                 {
                         type = "recipe",
-                        enabled = true,
+                        enabled = false,
                         energy_required = 60,
-                        category = "smelting",
+                        category = "crafting",
                         name = "furnace-mk2",
                         ingredients = {
                           {type = "item", name = "steel-plate", amount = 45}, 

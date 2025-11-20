@@ -19,13 +19,13 @@ with zipfile.ZipFile(
     zf.write("control.lua", "furnacesPlus/control.lua")
     # Sounds
     zf.write("sounds/mk4-furnace.ogg", "furnacesPlus/sounds/mk4-furnace.ogg")
-    zf.write("sounds/mk5-furnace.ogg", "furnacesPlus/sounds/mk5-furnace.ogg")
+    zf.write("sounds/atomic-furnace.ogg", "furnacesPlus/sounds/atomic-furnace.ogg")
     # Prototypes
     zf.write("prototypes/furnace-mk1.lua", "furnacesPlus/prototypes/furnace-mk1.lua")
     zf.write("prototypes/furnace-mk2.lua", "furnacesPlus/prototypes/furnace-mk2.lua")
     zf.write("prototypes/furnace-mk3.lua", "furnacesPlus/prototypes/furnace-mk3.lua")
     zf.write("prototypes/furnace-mk4.lua", "furnacesPlus/prototypes/furnace-mk4.lua")
-    zf.write("prototypes/furnace-mk5.lua", "furnacesPlus/prototypes/furnace-mk5.lua")
+    zf.write("prototypes/atomic-furnace.lua", "furnacesPlus/prototypes/atomic-furnace.lua")
     # Locale
     zf.write("locale/en/config.cfg", "furnacesPlus/locale/en/config.cfg")
     # Graphics
@@ -39,8 +39,8 @@ with zipfile.ZipFile(
         "furnacesPlus/graphics/icons/mk4-furnace-icon.png",
     )
     zf.write(
-        "graphics/icons/mk5-furnace-icon.png",
-        "furnacesPlus/graphics/icons/mk5-furnace-icon.png",
+        "graphics/icons/atomic-furnace-icon.png",
+        "furnacesPlus/graphics/icons/atomic-furnace-icon.png",
     )
     zf.write(
         "graphics/icons/steel-furnace.png",
@@ -60,10 +60,10 @@ with zipfile.ZipFile(
         "furnacesPlus/graphics/mk4-furnace/mk4-furnace.png",
     )
     zf.write(
-        "graphics/mk5-furnace/mk5-furnace-anim.png",
-        "furnacesPlus/graphics/mk5-furnace/mk5-furnace-anim.png",
+        "graphics/atomic-furnace/atomic-furnace-anim.png",
+        "furnacesPlus/graphics/atomic-furnace/atomic-furnace-anim.png",
     )
     zf.write(
-        "graphics/mk5-furnace/mk5-furnace.png",
-        "furnacesPlus/graphics/mk5-furnace/mk5-furnace.png",
+        "graphics/atomic-furnace/atomic-furnace.png",
+        "furnacesPlus/graphics/atomic-furnace/atomic-furnace.png",
     )

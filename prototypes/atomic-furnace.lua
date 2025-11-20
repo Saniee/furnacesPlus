@@ -1,16 +1,14 @@
---furnace-mk5.lua
-
 local hit_effects = require ("__base__.prototypes.entity.hit-effects")
 local sounds = require("__base__.prototypes.entity.sounds")
 
 data:extend({
     {
         type = "furnace",
-        name = "furnace-mk5",
-        icon = "__furnacesPlus__/graphics/icons/mk5-furnace-icon.png",
+        name = "atomic-furnace",
+        icon = "__furnacesPlus__/graphics/icons/atomic-furnace-icon.png",
         icon_size = 64, icon_mipmaps = 4,
         flags = {"placeable-neutral", "placeable-player", "player-creation"},
-        minable = {mining_time = 0.2, result = "furnace-mk5"},
+        minable = {mining_time = 0.2, result = "atomic-furnace"},
         max_health = 350,
         corpse = "electric-furnace-remnants",
         dying_explosion = "electric-furnace-explosion",
@@ -27,10 +25,10 @@ data:extend({
         module_slots = 6,
         allowed_effects = {"consumption", "speed", "productivity", "pollution"},
         crafting_categories = {"smelting"},
-        result_inventory_size = 1,
         crafting_speed = 24,
         energy_usage = "50MW",
         source_inventory_size = 1,
+        result_inventory_size = 1,
         energy_source =
         {
           type = "burner",
@@ -66,7 +64,7 @@ data:extend({
         {
           sound =
           {
-            filename = "__furnacesPlus__/sounds/mk5-furnace.ogg",
+            filename = "__furnacesPlus__/sounds/atomic-furnace.ogg",
             volume = 0.3
           },
           audible_distance_modifier = 0.6,
@@ -79,7 +77,7 @@ data:extend({
               layers =
               {
                 {
-                  filename = "__furnacesPlus__/graphics/mk5-furnace/mk5-furnace-anim.png",
+                  filename = "__furnacesPlus__/graphics/atomic-furnace/atomic-furnace-anim.png",
                   priority = "high",
                   width = 146,
                   height = 146,
@@ -93,7 +91,7 @@ data:extend({
               {
                 animation =
                 {
-                  filename = "__furnacesPlus__/graphics/mk5-furnace/mk5-furnace-anim.png",
+                  filename = "__furnacesPlus__/graphics/atomic-furnace/atomic-furnace-anim.png",
                   priority = "high",
                   width = 146,
                   height = 146,
@@ -110,7 +108,7 @@ data:extend({
         {
           pictures =
           {
-            filename = "__furnacesPlus__/graphics/mk5-furnace/mk5-furnace.png",
+            filename = "__furnacesPlus__/graphics/atomic-furnace/atomic-furnace.png",
             priority = "extra-high",
             width = 96,
             height = 96,
@@ -122,18 +120,18 @@ data:extend({
       },
       {
         type = "item",
-        name = "furnace-mk5",
-        icon = "__furnacesPlus__/graphics/icons/mk5-furnace-icon.png",
+        name = "atomic-furnace",
+        icon = "__furnacesPlus__/graphics/icons/atomic-furnace-icon.png",
         icon_size = 64, icon_mipmaps = 4,
         subgroup = "smelting-machine",
         order = "z+",
-        place_result = "furnace-mk5",
+        place_result = "atomic-furnace",
         stack_size = 5
       },
       {
         type = "recipe",
         enabled = false,
-        name = "furnace-mk5",
+        name = "atomic-furnace",
         category = "crafting",
         energy_required = 120,
         ingredients = {
@@ -145,20 +143,20 @@ data:extend({
           {type = "item", name = "uranium-238", amount = 20},
           {type = "item", name = "uranium-235", amount = 1},
         },
-        results = {{type = "item", name = "furnace-mk5", amount = 1}}
+        results = {{type = "item", name = "atomic-furnace", amount = 1}}
       },
       {
         type = "technology",
         enabled = true,
-        name = "furnace-mk5",
+        name = "atomic-furnace",
         icon_size = 64,
-        icon = "__furnacesPlus__/graphics/icons/mk5-furnace-icon.png",
+        icon = "__furnacesPlus__/graphics/icons/atomic-furnace-icon.png",
         prerequisites = {"furnace-mk4", "electric-engine", "production-science-pack", "uranium-processing"},
         effects =
         {
           {
             type = "unlock-recipe",
-            recipe = "furnace-mk5"
+            recipe = "atomic-furnace"
           }
         },
         unit =

@@ -48,17 +48,6 @@ accumulatorFurnace.graphics_set = {
             }
           }
         },
-        frozen_patch = {
-          filename = "__space-age__/graphics/entity/frozen/electric-furnace/electric-furnace.png",
-          height = 219,
-          tint = {r=127, g=127,b=255},
-          scale = 0.5,
-          shift = {
-            0.0234375,
-            0.1796875
-          },
-          width = 239
-        },
         water_reflection = {
           orientation_to_variation = false,
           pictures = {

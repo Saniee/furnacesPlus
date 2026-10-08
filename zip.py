@@ -1,69 +1,31 @@
 import json
 import zipfile
+from pathlib import Path
 
-with open("info.json", mode="r", encoding="utf-8") as info_f:
-    mod_data = json.load(info_f)
+ROOT = Path(__file__).parent
 
-version = mod_data["version"]
+# Everything the game needs; dev files (.git, fmtk-out, zip.py, ...) stay out.
+INCLUDE_FILES = ["info.json", "changelog.txt", "thumbnail.png", "LICENSE", "README.md"]
+INCLUDE_DIRS = ["graphics", "locale", "prototypes", "sounds"]
 
-with zipfile.ZipFile(
-    f"furnacesPlus_{version}.zip", "w", zipfile.ZIP_DEFLATED, True, 9
-) as zf:
-    # Mod info, and pic.
-    zf.write("thumbnail.png", "furnacesPlus/thumbnail.png")
-    zf.write("info.json", "furnacesPlus/info.json")
-    zf.write("changelog.txt", "furnacesPlus/changelog.txt")
-    # Main Mod files.
-    zf.write("data.lua", "furnacesPlus/data.lua")
-    zf.write("data-final-fixes.lua", "furnacesPlus/data-final-fixes.lua")
-    zf.write("control.lua", "furnacesPlus/control.lua")
-    # Sounds
-    zf.write("sounds/mk4-furnace.ogg", "furnacesPlus/sounds/mk4-furnace.ogg")
-    zf.write("sounds/mk5-furnace.ogg", "furnacesPlus/sounds/mk5-furnace.ogg")
-    # Prototypes
-    zf.write("prototypes/furnace-mk1.lua", "furnacesPlus/prototypes/furnace-mk1.lua")
-    zf.write("prototypes/furnace-mk2.lua", "furnacesPlus/prototypes/furnace-mk2.lua")
-    zf.write("prototypes/furnace-mk3.lua", "furnacesPlus/prototypes/furnace-mk3.lua")
-    zf.write("prototypes/furnace-mk4.lua", "furnacesPlus/prototypes/furnace-mk4.lua")
-    zf.write("prototypes/furnace-mk5.lua", "furnacesPlus/prototypes/furnace-mk5.lua")
-    # Locale
-    zf.write("locale/en/config.cfg", "furnacesPlus/locale/en/config.cfg")
-    # Graphics
-    #   Icons
-    zf.write(
-        "graphics/icons/electric-furnace.png",
-        "furnacesPlus/graphics/icons/electric-furnace.png",
-    )
-    zf.write(
-        "graphics/icons/mk4-furnace-icon.png",
-        "furnacesPlus/graphics/icons/mk4-furnace-icon.png",
-    )
-    zf.write(
-        "graphics/icons/mk5-furnace-icon.png",
-        "furnacesPlus/graphics/icons/mk5-furnace-icon.png",
-    )
-    zf.write(
-        "graphics/icons/steel-furnace.png",
-        "furnacesPlus/graphics/icons/steel-furnace.png",
-    )
-    zf.write(
-        "graphics/icons/stone-furnace.png",
-        "furnacesPlus/graphics/icons/stone-furnace.png",
-    )
-    #   Other
-    zf.write(
-        "graphics/mk4-furnace/mk4-furnace-anim.png",
-        "furnacesPlus/graphics/mk4-furnace/mk4-furnace-anim.png",
-    )
-    zf.write(
-        "graphics/mk4-furnace/mk4-furnace.png",
-        "furnacesPlus/graphics/mk4-furnace/mk4-furnace.png",
-    )
-    zf.write(
-        "graphics/mk5-furnace/mk5-furnace-anim.png",
-        "furnacesPlus/graphics/mk5-furnace/mk5-furnace-anim.png",
-    )
-    zf.write(
-        "graphics/mk5-furnace/mk5-furnace.png",
-        "furnacesPlus/graphics/mk5-furnace/mk5-furnace.png",
-    )
+with open(ROOT / "info.json", encoding="utf-8") as info_f:
+    info = json.load(info_f)
+
+name, version = info["name"], info["version"]
+folder = f"{name}_{version}"  # Factorio requires the top-level folder to be name or name_version
+
+files = [ROOT / f for f in INCLUDE_FILES]
+files += sorted(ROOT.glob("*.lua"))  # data.lua, data-final-fixes.lua, control.lua, ...
+for d in INCLUDE_DIRS:
+    files += sorted(p for p in (ROOT / d).rglob("*") if p.is_file())
+
+missing = [f for f in files if not f.is_file()]
+if missing:
+    raise SystemExit(f"Missing files: {', '.join(str(m.relative_to(ROOT)) for m in missing)}")
+
+out = ROOT / f"{folder}.zip"
+with zipfile.ZipFile(out, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as zf:
+    for f in files:
+        zf.write(f, f"{folder}/{f.relative_to(ROOT).as_posix()}")
+
+print(f"Wrote {out.name} ({len(files)} files)")

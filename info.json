@@ -1,11 +1,11 @@
 {
   "name": "furnacesPlus",
   "author": "Saniee",
-  "version": "0.1.7",
-  "factorio_version": "2.0",
+  "version": "0.2.0",
+  "factorio_version": "2.1",
   "dependencies": [
-    "base >= 2.0"
+    "base >= 2.1"
   ],
   "title": "Furnaces Plus",
-  "description": "Adds new Advanced furnaces from the old ones! from the first 3 its just normal furnaces from the game that are modified to be electric and do less pollution. After t3 there is no pollution and furnaces go extremly fast."
+  "description": "Adds new Advanced furnaces from the old ones! from the first 3 its just normal furnaces from the game that are modified to be electric and do less pollution. After t3 there is no pollution and furnaces go extremly fast.\n\nStats (crafting speed / modules / pollution per min): MK1 2 / 0 / 1, MK2 4 / 0 / 2, MK3 4 / 4 / 0.5, MK4 12 / 4 / 0.2 (rocket fuel), MK5 24 / 6 / 0 (nuclear fuel). Vanilla furnaces are 1, 2 and 2.\n\nRecipes:\nMK1: 25 stone, 20 electronic circuit, 20 iron stick\nMK2: 45 steel plate, 35 advanced circuit, 30 stone brick, 25 iron stick\nMK3: 120 steel plate, 45 processing unit, 60 stone brick, 20 electric engine unit\nMK4: 240 steel plate, 90 processing unit, 120 stone brick, 40 electric engine unit, 50 low density structure\nMK5: 500 steel plate, 150 processing unit, 200 stone brick, 100 electric engine unit, 10 low density structure, 20 uranium-238, 1 uranium-235"
 }

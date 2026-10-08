@@ -162,4 +162,4 @@ data:extend({
 })
 
 data:extend({{type = "fuel-category", name = "rocket"}})
-data.raw.item["rocket-fuel"].fuel_category = "rocket"
+data.raw.item["rocket-fuel"].fuel_categories = {"rocket"}

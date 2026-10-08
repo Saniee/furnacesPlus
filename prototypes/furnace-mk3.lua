@@ -9,7 +9,7 @@ accumulatorFurnace.icons = {
       tint = {r=127, g=127,b=255}
     },
 }
-accumulatorFurnace.crafting_speed = 8
+accumulatorFurnace.crafting_speed = 4
 accumulatorFurnace.module_slots = 4
 accumulatorFurnace.energy_usage = "560kW"
 accumulatorFurnace.energy_source.emissions_per_minute = { pollution = 0.5 }

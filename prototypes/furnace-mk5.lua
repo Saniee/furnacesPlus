@@ -1,5 +1,3 @@
---furnace-mk5.lua
-
 local hit_effects = require ("__base__.prototypes.entity.hit-effects")
 local sounds = require("__base__.prototypes.entity.sounds")
 

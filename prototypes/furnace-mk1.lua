@@ -1,5 +1,3 @@
---furnace-t1.lua
-
 local accumulatorFurnace = table.deepcopy(data.raw["furnace"]["stone-furnace"])
 
 accumulatorFurnace.name = "furnace-mk1"

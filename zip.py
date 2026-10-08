@@ -4,7 +4,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent
 
-# Everything the game needs; dev files (.git, fmtk-out, zip.py, ...) stay out.
 INCLUDE_FILES = ["info.json", "changelog.txt", "thumbnail.png", "LICENSE", "README.md"]
 INCLUDE_DIRS = ["graphics", "locale", "prototypes", "sounds"]
 
@@ -15,7 +14,7 @@ name, version = info["name"], info["version"]
 folder = f"{name}_{version}"  # Factorio requires the top-level folder to be name or name_version
 
 files = [ROOT / f for f in INCLUDE_FILES]
-files += sorted(ROOT.glob("*.lua"))  # data.lua, data-final-fixes.lua, control.lua, ...
+files += sorted(ROOT.glob("*.lua"))
 for d in INCLUDE_DIRS:
     files += sorted(p for p in (ROOT / d).rglob("*") if p.is_file())
 

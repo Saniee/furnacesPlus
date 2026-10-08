@@ -1,5 +1,3 @@
---furnace-t3.lua
-
 local accumulatorFurnace = table.deepcopy(data.raw["furnace"]["electric-furnace"])
 
 accumulatorFurnace.name = "furnace-mk3"
@@ -17,7 +15,6 @@ accumulatorFurnace.energy_source.drain = "300W"
 
 accumulatorFurnace.minable.result = "furnace-mk3"
 
--- tint = {r=127, g=127,b=255},
 accumulatorFurnace.graphics_set = {
         animation = {
           layers = {

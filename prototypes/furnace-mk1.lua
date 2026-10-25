@@ -141,7 +141,7 @@ data:extend(
                         enabled = false,
                         energy_required = 30,
                         name = "furnace-mk1",
-                        category = "crafting",
+                        categories = {"crafting"},
                         icon_size = 64, icon_mipmaps = 4,
                         ingredients = {
                           {type = "item", name= "stone", amount = 25}, 

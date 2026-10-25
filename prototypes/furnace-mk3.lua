@@ -166,7 +166,7 @@ data:extend(
                         type = "recipe",
                         enabled = false,
                         name = "furnace-mk3",
-                        category = "crafting",
+                        categories = {"crafting"},
                         energy_required = 120,
                         ingredients = {
                           {type = "item", name = "steel-plate", amount = 120}, 

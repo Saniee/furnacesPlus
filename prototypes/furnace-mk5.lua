@@ -14,6 +14,7 @@ data:extend({
         dying_explosion = "electric-furnace-explosion",
         resistances =
         {
+          ---@diagnostic disable-next-line: missing-fields
           {
             type = "fire",
             percent = 80
@@ -38,6 +39,7 @@ data:extend({
           effectivity = 1,
           smoke =
           {
+            ---@diagnostic disable-next-line: missing-fields
             {
               name = "smoke",
               deviation = {0.1, 0.1},
@@ -46,6 +48,7 @@ data:extend({
               starting_vertical_speed = 0.08,
               starting_frame_deviation = 60
             },
+            ---@diagnostic disable-next-line: missing-fields
             {
                 name = "smoke",
                 deviation = {0.1, 0.1},
@@ -132,7 +135,7 @@ data:extend({
         type = "recipe",
         enabled = false,
         name = "furnace-mk5",
-        category = "crafting",
+        categories = {"crafting"},
         energy_required = 120,
         ingredients = {
           {type = "item", name = "steel-plate", amount = 500},

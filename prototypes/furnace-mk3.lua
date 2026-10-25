@@ -1,5 +1,3 @@
---furnace-t3.lua
-
 local accumulatorFurnace = table.deepcopy(data.raw["furnace"]["electric-furnace"])
 
 accumulatorFurnace.name = "furnace-mk3"
@@ -9,7 +7,7 @@ accumulatorFurnace.icons = {
       tint = {r=127, g=127,b=255}
     },
 }
-accumulatorFurnace.crafting_speed = 8
+accumulatorFurnace.crafting_speed = 4
 accumulatorFurnace.module_slots = 4
 accumulatorFurnace.energy_usage = "560kW"
 accumulatorFurnace.energy_source.emissions_per_minute = { pollution = 0.5 }
@@ -17,7 +15,6 @@ accumulatorFurnace.energy_source.drain = "300W"
 
 accumulatorFurnace.minable.result = "furnace-mk3"
 
--- tint = {r=127, g=127,b=255},
 accumulatorFurnace.graphics_set = {
         animation = {
           layers = {
@@ -169,7 +166,7 @@ data:extend(
                         type = "recipe",
                         enabled = false,
                         name = "furnace-mk3",
-                        category = "crafting",
+                        categories = {"crafting"},
                         energy_required = 120,
                         ingredients = {
                           {type = "item", name = "steel-plate", amount = 120}, 

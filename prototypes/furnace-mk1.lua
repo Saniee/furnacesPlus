@@ -1,5 +1,3 @@
---furnace-t1.lua
-
 local accumulatorFurnace = table.deepcopy(data.raw["furnace"]["stone-furnace"])
 
 accumulatorFurnace.name = "furnace-mk1"
@@ -18,6 +16,7 @@ accumulatorFurnace.energy_source = {
         emissions_per_minute = { pollution = 1 }
 }
 accumulatorFurnace.minable.result = "furnace-mk1"
+accumulatorFurnace.next_upgrade = "furnace-mk2"
 
 accumulatorFurnace.graphics_set = {
         animation = {
@@ -143,7 +142,7 @@ data:extend(
                         enabled = false,
                         energy_required = 30,
                         name = "furnace-mk1",
-                        category = "crafting",
+                        categories = {"crafting"},
                         icon_size = 64, icon_mipmaps = 4,
                         ingredients = {
                           {type = "item", name= "stone", amount = 25}, 

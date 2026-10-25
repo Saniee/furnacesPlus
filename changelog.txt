@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 08-10-2026
+  Changes:
+    - Updated to support Factorio 2.1. Requires Factorio 2.1.20 or newer.
+    - Recipes now use categories instead of the removed category property.
+    - Rocket fuel is now in both the chemical and rocket fuel categories, so the tank, burner mining drill and other chemical burners can use it again.
+    - Removed the fuel category overrides on vanilla entities, which could overwrite changes from other mods.
+    - Rebalanced the Advanced Electric Furnace (MK3) crafting speed from 8 to 4.
+  Bugfixes:
+    - Upgrade planner now upgrades the Advanced Stone Furnace to the Advanced Steel Furnace instead of the vanilla steel furnace.
+  Locale:
+    - Fixed furnace descriptions that listed wrong module slots and pollution.
+---------------------------------------------------------------------------------------------------
 Version: 0.1.7
 Date: 29-01-2026
   Bugfixes:

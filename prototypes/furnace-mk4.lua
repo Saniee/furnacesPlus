@@ -1,5 +1,3 @@
---furnace-mk4.lua
-
 local hit_effects = require ("__base__.prototypes.entity.hit-effects")
 local sounds = require("__base__.prototypes.entity.sounds")
 
@@ -16,6 +14,7 @@ data:extend({
         dying_explosion = "electric-furnace-explosion",
         resistances =
         {
+          ---@diagnostic disable-next-line: missing-fields
           {
             type = "fire",
             percent = 80
@@ -40,6 +39,7 @@ data:extend({
           effectivity = 4,
           smoke =
           {
+            ---@diagnostic disable-next-line: missing-fields
             {
               name = "smoke",
               deviation = {0.1, 0.1},
@@ -126,7 +126,7 @@ data:extend({
         type = "recipe",
         enabled = false,
         name = "furnace-mk4",
-        category = "crafting",
+        categories = {"crafting"},
         energy_required = 120,
         ingredients = {
           {type = "item", name = "steel-plate", amount = 240}, 
@@ -162,4 +162,4 @@ data:extend({
 })
 
 data:extend({{type = "fuel-category", name = "rocket"}})
-data.raw.item["rocket-fuel"].fuel_category = "rocket"
+data.raw.item["rocket-fuel"].fuel_categories = {"chemical", "rocket"}

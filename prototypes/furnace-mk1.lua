@@ -16,6 +16,7 @@ accumulatorFurnace.energy_source = {
         emissions_per_minute = { pollution = 1 }
 }
 accumulatorFurnace.minable.result = "furnace-mk1"
+accumulatorFurnace.next_upgrade = "furnace-mk2"
 
 accumulatorFurnace.graphics_set = {
         animation = {

@@ -1,20 +1,20 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/Saniee/furnacesPlus)
 # furnacesPlus
- Adds new Advanced furnaces from the old ones! from the first 3 its just normal furnaces from the game that are modified to be electric and do less pollution. After mk3 there is no pollution and furnaces go extremly fast.
+ Adds new Advanced furnaces from the old ones! from the first 3 its just normal furnaces from the game that are modified to be electric and do less pollution. After mk3 furnaces go extremly fast, with MK4 barely polluting and MK5 not polluting at all.
 
 ## Furnace stats
 
 | Furnace | Based on | Crafting speed | Energy | Module slots | Pollution/min |
 |---|---|---|---|---|---|
-| Advanced Stone Furnace (MK1) | Stone furnace | 2 | Electric, 90 kW (+100 W drain) | 0 | 1 |
-| Advanced Steel Furnace (MK2) | Steel furnace | 4 | Electric, 90 kW (+200 W drain) | 0 | 2 |
+| Advanced Stone Furnace (MK1) | Stone furnace | 2 | Electric, 140 kW (+100 W drain) | 0 | 1 |
+| Advanced Steel Furnace (MK2) | Steel furnace | 4 | Electric, 280 kW (+200 W drain) | 0 | 2 |
 | Advanced Electric Furnace (MK3) | Electric furnace | 4 | Electric, 560 kW (+300 W drain) | 4 | 0.5 |
 | Industrial Rocket Fueled Furnace (MK4) | Custom | 12 | Rocket fuel, 1 MW (effectivity 4) | 4 | 0.2 |
-| Nuclear Furnace (MK5) | Custom | 24 | Nuclear fuel, 50 MW | 6 | 0 |
+| Nuclear Furnace (MK5) | Custom | 24 | Uranium fuel cells, 50 MW | 6 | 0 |
 
 For comparison, the vanilla stone, steel and electric furnaces have crafting speeds of 1, 2 and 2.
 
-Rocket fuel is moved into a new "rocket" fuel category so it can be used by the MK4 furnace. Stone and steel furnaces, boilers, locomotives, cars and burner inserters are also allowed to burn rocket fuel.
+Rocket fuel is also added to a new "rocket" fuel category, so the MK4 furnace only accepts rocket fuel. It still counts as chemical fuel, so everything that burned it before still can.
 
 ## Recipes
 
